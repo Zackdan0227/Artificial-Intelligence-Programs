@@ -1,0 +1,16 @@
+In this assignment, you will write a program that uses reinforcement learning to learn the correct
+policy in a Markov Decision Process.
+
+The input to the program is a Markov Decision Process. Rather than solve this, however, the
+program will learn what to do through experimentation. It will play many rounds. In each round it
+starts in a random state. It then goes through the process: at each state it chooses an action, and
+then the stochastic process puts it in a new state. When it reaches a terminal state, that round is
+over. It now records, for each state and choice of action that it went through, how well that choice
+of action worked out for it.
+
+Initially it chooses the action at random, but as it plays more and more round and gets more and
+more experience, it increasingly chooses the actions that in the past have paid off for it.
+Conceptually, there is an agent and a world model. The world model randomly chooses a starting
+state and executes the Markov decision process each time the agent chooses an action. The agent
+chooses actions and gradually learns what actions are best. You are not required to implement these
+as separate modules, though you might wish to.
